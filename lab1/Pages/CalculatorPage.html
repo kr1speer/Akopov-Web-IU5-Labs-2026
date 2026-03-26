@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boeing Calc - Калькулятор</title>
+    <link rel="stylesheet" href="../Calculator.CSS">
+</head>
+<body>
+    <header>
+        <div class="topnav">
+            <a href="./HomePage.html">
+                <img src="https://www.boeing.com/content/experience-fragments/theboeingcompany/us/en/site/header/redesign-header/_jcr_content/root/container_copy_copy/container/image_copy_copy.coreimg.svg/1759858572842/boeing-logo-white.svg">
+            </a>
+            <a href="./WorkGoalPage.html">Цель работы</a>
+            <a class="active" href="./CalculatorPage.html">Калькулятор</a>
+            <a href="./AboutPage.html">Об авторе</a>
+            <div class="theme-select">
+                <label for="themeToggle">Тема: </label>
+                <select id="themeToggle" class="calc-type" style="width: auto; margin-top: 0;">
+                    <option value="dark">Тёмная</option>
+                    <option value="light">Светлая</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="calculator">
+            <div id="result" class="result">0</div>
+
+            <div class="buttons">
+                <div>
+                    <button id="btn_op_clear" class="my-btn secondary">C</button>
+                    <button id="btn_op_sign" class="my-btn secondary">+/-</button>
+                    <button id="btn_op_percent" class="my-btn secondary">%</button>
+                    <button id="btn_op_div" class="my-btn primary">/</button>
+                </div>
+                <div>
+                    <button id="btn_digit_7" class="my-btn">7</button>
+                    <button id="btn_digit_8" class="my-btn">8</button>
+                    <button id="btn_digit_9" class="my-btn">9</button>
+                    <button id="btn_op_mult" class="my-btn primary">x</button>
+                </div>
+                <div>
+                    <button id="btn_digit_4" class="my-btn">4</button>
+                    <button id="btn_digit_5" class="my-btn">5</button>
+                    <button id="btn_digit_6" class="my-btn">6</button>
+                    <button id="btn_op_minus" class="my-btn primary">-</button>
+                </div>
+                <div>
+                    <button id="btn_digit_1" class="my-btn">1</button>
+                    <button id="btn_digit_2" class="my-btn">2</button>
+                    <button id="btn_digit_3" class="my-btn">3</button>
+                    <button id="btn_op_plus" class="my-btn primary">+</button>
+                </div>
+                <div>
+                    <button id="btn_digit_0" class="my-btn">0</button>
+                    <button id="btn_digit_dot" class="my-btn">.</button>
+                    <button id="btn_op_equal" class="my-btn primary execute">=</button>
+                </div>
+            </div>
+
+            <select id="calcType" class="calc-type">
+                <option value="standard">Стандартный</option>
+                <option value="engineering">Инженерный</option>
+            </select>
+        </div>
+    </section>
+
+    <footer>
+        <p>ЛР выполнена Акоповым А. А. <a class="github-link" href="https://github.com/kr1speer/Akopov-Web-IU5-Labs-2026" target="_blank">GitHub</a></p>
+    </footer>
+</body>
+</html>

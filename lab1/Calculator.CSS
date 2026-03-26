@@ -1,0 +1,236 @@
+/* Базовые настройки */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* Корпоративные шрифты в стиле Boeing */
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #0a1a2f;
+  background-image: url('https://www.lot.com/content/dam/lot/lot-com/other-images/flota/boeing-737-8-max/Boeing-737-8-MAX-rev.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; /* Изменил на cover, чтобы фон всегда заполнял экран */
+  background-attachment: fixed;
+}
+
+/* --- ШАПКА В СТИЛЕ BOEING --- */
+header {
+  /* Градиент синего цвета */
+  background: linear-gradient(90deg, #005EB8 0%, #001D4A 100%);
+  padding: 0 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.topnav {
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+
+.topnav a {
+  color: rgba(255, 255, 255, 0.7);
+  padding: 0 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s;
+}
+
+.topnav a:hover {
+  color: #ffffff;
+}
+
+.topnav a.active {
+  color: #ffffff;
+  border-bottom: 4px solid #ffffff; /* Подчеркивание активной вкладки */
+}
+
+.theme-select {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  margin-left: auto;
+  font-weight: bold;
+}
+
+/* --- ОСНОВНОЙ КОНТЕЙНЕР ДЛЯ КОНТЕНТА --- */
+section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Стиль для текстовых страниц (сохраняем твой дизайн стекла) */
+.content-card {
+  max-width: 600px;
+  width: 100%;
+  background: rgba(10, 26, 47, 0.85);
+  backdrop-filter: blur(3px);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 15px 30px rgba(0, 40, 80, 0.6);
+  border: 1px solid #1e3a5f;
+  color: white;
+  margin-top: -450px;
+}
+
+.content-card h1 {
+  margin-bottom: 20px;
+  color: #0099ff;
+}
+
+/* --- ТВОЙ ОРИГИНАЛЬНЫЙ СТИЛЬ КАЛЬКУЛЯТОРА --- */
+.calculator {
+  max-width: 350px;
+  width: 100%;
+  background: rgba(10, 26, 47, 0.85);
+  backdrop-filter: blur(3px);
+  border-radius: 20px;
+  padding: 25px 20px 20px;
+  box-shadow: 0 15px 30px rgba(0, 40, 80, 0.6);
+  border: 1px solid #1e3a5f;
+}
+
+.result {
+  width: 100%;
+  height: 70px;
+  margin-bottom: 20px;
+  padding: 0 15px;
+  background: #0b1b32;
+  border-radius: 15px;
+  text-align: right;
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 70px;
+  border: 1px solid #2c4c7c;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.5);
+  transition: background 0.3s, color 0.3s;
+}
+
+.my-btn {
+  margin: 5px;
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+  border: none;
+  background: #1e3a5f;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.1s ease;
+}
+
+.my-btn:hover {
+  background: #2c4c7c;
+  transform: translateY(-2px);
+  box-shadow: 5px 7px 2px #0a1a2f;
+}
+
+.my-btn:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 #0a1a2f;
+  filter: brightness(120%);
+}
+
+.my-btn.primary {
+  background: #0078d2;
+  font-weight: 600;
+}
+
+.my-btn.primary:hover {
+  background: #0099ff;
+}
+
+.my-btn.secondary {
+  background: #5a6c7e;
+  font-weight: 400;
+}
+
+.my-btn.secondary:hover {
+  background: #7b8d9f;
+}
+
+.my-btn.execute {
+  width: 130px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.buttons > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+select.calc-type {
+  background: #1e3a5f;
+  color: white;
+  border: 1px solid #0078d2;
+  padding: 8px;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 15px;
+  width: 100%;
+}
+
+/* --- ПОДВАЛ (FOOTER) --- */
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  background: rgba(10, 26, 47, 0.9);
+  color: white;
+  font-size: 0.9rem;
+}
+
+.github-link {
+  display: inline-block;
+  background: #24292e;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  text-decoration: none;
+  font-weight: bold;
+  border: 1px solid #6c6f70;
+  transition: 0.2s;
+  margin-left: 10px;
+}
+
+.github-link:hover {
+  background: #2b3137;
+}
+
+mark {
+  background: #0078d2;
+  color: white;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.home {
+  color: white;
+  font-size: 4rem;
+  margin-bottom: 400px;
+  max-width: 700px;
+  width: 100%;
+  margin-left: 600px;
+}
