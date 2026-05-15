@@ -55,7 +55,7 @@ const remove = (id) => {
     const filteredStocks = stocks.filter(s => s.id !== id);
 
     if (filteredStocks.length === stocks.length) {
-        return false; // Ничего не удалили
+        return false;
     }
 
     fileService.writeData(dataFilePath, filteredStocks);

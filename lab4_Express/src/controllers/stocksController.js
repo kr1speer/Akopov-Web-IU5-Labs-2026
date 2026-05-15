@@ -21,7 +21,6 @@ const createStock = (req, res) => {
 
     const stockData = req.body;
 
-    // Простая валидация
     if (!stockData.src || !stockData.title || !stockData.text) {
         return res.status(400).json({ error: 'Не все поля заполнены' });
     }
